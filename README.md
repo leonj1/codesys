@@ -45,13 +45,12 @@ from codesys import Agent
 DEFAULT_WORKING_DIR = os.getcwd()  # Use the current working directory by default
 
 
-DEFAULT_USER_MESSAGE = "Your default task message here"  # Replace with your default message
+DEFAULT_USER_MESSAGE = "Describe your task here"
 
 
 
 
 def generate_plan(working_dir, user_message):
-    """Generate a plan in plan.md based on the user message."""
     prompt = f'''
 generate a plan into plan.md file given the following task:
 <task>
@@ -66,7 +65,6 @@ Given this task, explore the codebase and create a plan for the implementation i
 
 
 def execute_plan(working_dir):
-    """Execute the plan laid out in plan.md."""
     prompt = '''
 Implement the task laid out in plan.md: ultrathink
 '''
@@ -74,7 +72,7 @@ Implement the task laid out in plan.md: ultrathink
 
 
 
-
+# Run the File
 def main():
     parser = argparse.ArgumentParser(description='Generate and execute a plan based on a task.')
     parser.add_argument('--working-dir', '-w', help='Working directory for the agent')
