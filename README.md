@@ -28,7 +28,7 @@ lines = agent.run("""/init""", stream=True)
 
 ### Practical Use:
 
-the most effective way I've found of using this sdk is by mimicing my actual qorkflow with claude code which I've found extremely effective.
+the most effective way I've found of using this sdk is by mimicing my actual workflow with claude code which I've found extremely effective.
 
 the workflow is simple: plan the task by exploring the codebase, then implement the plan
 ```python
