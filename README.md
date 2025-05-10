@@ -19,19 +19,10 @@ pip install codesys
 from codesys import Agent
 
 # Initialize with a working directory
-agent = Agent(working_dir="/path/to/your/project")
+agent = Agent(working_dir="/Users/seansullivan/lmsys-sdk/")
 
-# Run Claude with a prompt
-result = agent.run("Your prompt here")
-print(result)
-
-# Auto-streaming output (prints automatically)
-lines = agent.run("Generate a story", stream=True)
-
-# Manual streaming (if you need more control)
-process = agent.run("Another prompt", stream=True, auto_print=False)
-for line in process.stdout:
-    print(line, end="")
+# Run Claude with a prompt and automatically print streaming output
+lines = agent.run("""/init""", stream=True)
 ```
 
 ## Features
